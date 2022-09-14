@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Trash : MonoBehaviour
 {
-    public bool isTouch = false;
+    public bool isTouch;
 
+    private void Start()
+    {
+         isTouch= false;
+    }
     // Update is called once per frame
     void Update()
     {

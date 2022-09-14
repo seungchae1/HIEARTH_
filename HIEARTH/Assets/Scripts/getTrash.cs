@@ -5,13 +5,13 @@ using UnityEngine;
 public class getTrash : MonoBehaviour
 {
     Trash t;
-    int cnt;
+    bool get;
     bool touch;
     // Start is called before the first frame update
     void Start()
     {
-        t = new Trash();
-        cnt = 0;
+        t = GameObject.Find("trash_bag").GetComponent<Trash>();
+        get = false;
         touch = false;
     }
 
@@ -19,10 +19,9 @@ public class getTrash : MonoBehaviour
     void Update()
     {
         if(t.isTouch)
-        {
+        { 
             if (touch)
             {
-                cnt++;
                 this.transform.localScale = new Vector3(0f, 0f, 0f);
             }
         }
@@ -30,5 +29,6 @@ public class getTrash : MonoBehaviour
     private void OnMouseDown()
     {
         touch = true;
+        if(t.isTouch) get=true;
     }
 }
