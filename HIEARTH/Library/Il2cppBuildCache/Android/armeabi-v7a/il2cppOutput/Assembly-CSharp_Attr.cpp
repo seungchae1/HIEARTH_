@@ -273,7 +273,21 @@ static void AssemblyU2DCSharp_CustomAttributesCacheGenerator(CustomAttributesCac
 		DebuggableAttribute__ctor_m7FF445C8435494A4847123A668D889E692E55550(tmp, 2LL, NULL);
 	}
 }
-static void chat_Manger_tE4A8419D5A902D06F5E37CD4B91F0FE54AE143D3_CustomAttributesCacheGenerator_npcText(CustomAttributesCache* cache)
+static void chat_Manger_tE4A8419D5A902D06F5E37CD4B91F0FE54AE143D3_CustomAttributesCacheGenerator_npcTextk(CustomAttributesCache* cache)
+{
+	{
+		SerializeField_t6B23EE6CC99B21C3EBD946352112832A70E67E25 * tmp = (SerializeField_t6B23EE6CC99B21C3EBD946352112832A70E67E25 *)cache->attributes[0];
+		SerializeField__ctor_mDE6A7673BA2C1FAD03CFEC65C6D473CC37889DD3(tmp, NULL);
+	}
+}
+static void chat_Manger_tE4A8419D5A902D06F5E37CD4B91F0FE54AE143D3_CustomAttributesCacheGenerator_npcTextw(CustomAttributesCache* cache)
+{
+	{
+		SerializeField_t6B23EE6CC99B21C3EBD946352112832A70E67E25 * tmp = (SerializeField_t6B23EE6CC99B21C3EBD946352112832A70E67E25 *)cache->attributes[0];
+		SerializeField__ctor_mDE6A7673BA2C1FAD03CFEC65C6D473CC37889DD3(tmp, NULL);
+	}
+}
+static void chat_Manger_tE4A8419D5A902D06F5E37CD4B91F0FE54AE143D3_CustomAttributesCacheGenerator_npcTextt(CustomAttributesCache* cache)
 {
 	{
 		SerializeField_t6B23EE6CC99B21C3EBD946352112832A70E67E25 * tmp = (SerializeField_t6B23EE6CC99B21C3EBD946352112832A70E67E25 *)cache->attributes[0];
@@ -281,9 +295,11 @@ static void chat_Manger_tE4A8419D5A902D06F5E37CD4B91F0FE54AE143D3_CustomAttribut
 	}
 }
 IL2CPP_EXTERN_C const CustomAttributesCacheGenerator g_AssemblyU2DCSharp_AttributeGenerators[];
-const CustomAttributesCacheGenerator g_AssemblyU2DCSharp_AttributeGenerators[2] = 
+const CustomAttributesCacheGenerator g_AssemblyU2DCSharp_AttributeGenerators[4] = 
 {
-	chat_Manger_tE4A8419D5A902D06F5E37CD4B91F0FE54AE143D3_CustomAttributesCacheGenerator_npcText,
+	chat_Manger_tE4A8419D5A902D06F5E37CD4B91F0FE54AE143D3_CustomAttributesCacheGenerator_npcTextk,
+	chat_Manger_tE4A8419D5A902D06F5E37CD4B91F0FE54AE143D3_CustomAttributesCacheGenerator_npcTextw,
+	chat_Manger_tE4A8419D5A902D06F5E37CD4B91F0FE54AE143D3_CustomAttributesCacheGenerator_npcTextt,
 	AssemblyU2DCSharp_CustomAttributesCacheGenerator,
 };
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void RuntimeCompatibilityAttribute_set_WrapNonExceptionThrows_m8562196F90F3EBCEC23B5708EE0332842883C490_inline (RuntimeCompatibilityAttribute_tFF99AB2963098F9CBCD47A20D9FD3D51C17C1C80 * __this, bool ___value0, const RuntimeMethod* method)

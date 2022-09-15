@@ -10,6 +10,7 @@ TagManager:
   - npcW
   - npcT
   - ground
+  - trash_bag
   layers:
   - Default
   - TransparentFX

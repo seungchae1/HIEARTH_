@@ -1375,6 +1375,15 @@ public:
 };
 
 
+// UnityEngine.CircleCollider2D
+struct CircleCollider2D_tD909965F1FE89EA6CAF32E86E3675F16A79EB913  : public Collider2D_tDDBF081328B83D21D0BA3B5036D77B32528BA722
+{
+public:
+
+public:
+};
+
+
 // UnityEngine.EdgeCollider2D
 struct EdgeCollider2D_t95C53E6DB7B534AD62A86D161BB0F5AB0C4E2A4B  : public Collider2D_tDDBF081328B83D21D0BA3B5036D77B32528BA722
 {
@@ -1619,6 +1628,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BoxCollider2D_set_size_Injected_mB8DEA9F
 	_il2cpp_icall_func = (BoxCollider2D_set_size_Injected_mB8DEA9F8BBB15256BAE3092D37FDA1AE9D081401_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.BoxCollider2D::set_size_Injected(UnityEngine.Vector2&)");
 	_il2cpp_icall_func(__this, ___value0);
 }
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
