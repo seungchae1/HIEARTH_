@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Trash : MonoBehaviour
 {
-    public bool isTouch;
-
+    public static bool isTouch;
     private void Start()
     {
-         isTouch= false;
+        isTouch = false;
     }
     // Update is called once per frame
     void Update()
@@ -18,7 +17,6 @@ public class Trash : MonoBehaviour
             this.transform.localScale = new Vector3(0f, 0f, 0f);
 
         }
-        
     }
 
     private void OnMouseDown()

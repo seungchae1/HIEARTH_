@@ -8,7 +8,9 @@ public class toForest2 : MonoBehaviour
     public float point;
     void Update()
     {
-        if(this.transform.position.x >=point)
+        if(this.transform.position.x >= point)
+        {
             SceneManager.LoadScene("stageForest2");
+        }
     }
 }

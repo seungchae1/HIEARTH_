@@ -11,6 +11,7 @@ public class backForest1 : MonoBehaviour
         if (point > this.transform.position.x)
         {
             SceneManager.LoadScene("stageForest1");
+            player_p1.position = new Vector3(84.0f, this.transform.position.y, 0f);
         }
 
     }
