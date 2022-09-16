@@ -2051,11 +2051,11 @@ static void Collider2D_tDDBF081328B83D21D0BA3B5036D77B32528BA722_CustomAttribute
 		NativeHeaderAttribute__ctor_m0E83F29C5939F185D6E90541591802EB2845FD76(tmp, il2cpp_codegen_string_new_wrapper("\x4D\x6F\x64\x75\x6C\x65\x73\x2F\x50\x68\x79\x73\x69\x63\x73\x32\x44\x2F\x50\x75\x62\x6C\x69\x63\x2F\x43\x6F\x6C\x6C\x69\x64\x65\x72\x32\x44\x2E\x68"), NULL);
 	}
 }
-static void CircleCollider2D_tD909965F1FE89EA6CAF32E86E3675F16A79EB913_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
+static void CapsuleCollider2D_tF11350A4C377237B7E78A224D978E9F57A872C39_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
 {
 	{
 		NativeHeaderAttribute_t7F0E4B53790AA75CDB4C44E6D644267F8FE3066C * tmp = (NativeHeaderAttribute_t7F0E4B53790AA75CDB4C44E6D644267F8FE3066C *)cache->attributes[0];
-		NativeHeaderAttribute__ctor_m0E83F29C5939F185D6E90541591802EB2845FD76(tmp, il2cpp_codegen_string_new_wrapper("\x4D\x6F\x64\x75\x6C\x65\x73\x2F\x50\x68\x79\x73\x69\x63\x73\x32\x44\x2F\x50\x75\x62\x6C\x69\x63\x2F\x43\x69\x72\x63\x6C\x65\x43\x6F\x6C\x6C\x69\x64\x65\x72\x32\x44\x2E\x68"), NULL);
+		NativeHeaderAttribute__ctor_m0E83F29C5939F185D6E90541591802EB2845FD76(tmp, il2cpp_codegen_string_new_wrapper("\x4D\x6F\x64\x75\x6C\x65\x73\x2F\x50\x68\x79\x73\x69\x63\x73\x32\x44\x2F\x50\x75\x62\x6C\x69\x63\x2F\x43\x61\x70\x73\x75\x6C\x65\x43\x6F\x6C\x6C\x69\x64\x65\x72\x32\x44\x2E\x68"), NULL);
 	}
 }
 static void EdgeCollider2D_t95C53E6DB7B534AD62A86D161BB0F5AB0C4E2A4B_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
@@ -2083,7 +2083,7 @@ const CustomAttributesCacheGenerator g_UnityEngine_Physics2DModule_AttributeGene
 	RaycastHit2D_t210878DAEBC96C1F69DF9883C454758724A106A4_CustomAttributesCacheGenerator,
 	Rigidbody2D_tD23204FEE9CB4A36737043B97FD409DE05D5DCE5_CustomAttributesCacheGenerator,
 	Collider2D_tDDBF081328B83D21D0BA3B5036D77B32528BA722_CustomAttributesCacheGenerator,
-	CircleCollider2D_tD909965F1FE89EA6CAF32E86E3675F16A79EB913_CustomAttributesCacheGenerator,
+	CapsuleCollider2D_tF11350A4C377237B7E78A224D978E9F57A872C39_CustomAttributesCacheGenerator,
 	EdgeCollider2D_t95C53E6DB7B534AD62A86D161BB0F5AB0C4E2A4B_CustomAttributesCacheGenerator,
 	BoxCollider2D_t929D014FDE69DCA5443296C432D640BCBE7E30B9_CustomAttributesCacheGenerator,
 	ContactFilter2D_t82BBB159A7E392A24921803A0E79669F4E34DFCB_CustomAttributesCacheGenerator_useTriggers,

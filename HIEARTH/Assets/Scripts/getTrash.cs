@@ -6,12 +6,15 @@ public class getTrash : MonoBehaviour
 {
     public static int get;
     bool touch;
+    int gett;
 
     // Start is called before the first frame update
     void Start()
     {
         get = 0;
+        gett = 0;
         touch = false;
+        
     }
 
     // Update is called once per frame
@@ -24,10 +27,25 @@ public class getTrash : MonoBehaviour
                 this.transform.localScale = new Vector3(0f, 0f, 0f);
             }
         }
+
+        if (gett == 4)
+        {
+            Debug.Log(get + "gett" + gett);
+            npc.istrashclear = 2;
+            gett = 5;
+        }
+
     }
+
     private void OnMouseDown()
     {
         touch = true;
-        if(Trash.isTouch) get++;
+        if (Trash.isTouch)
+        {
+            
+            get++;
+            gett+=get;
+            
+        }
     }
 }

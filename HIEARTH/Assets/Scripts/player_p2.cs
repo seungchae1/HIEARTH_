@@ -17,6 +17,6 @@ public class player_p2 : MonoBehaviour
     void Update()
     {
         if (this.transform.position.x >= 37.5) rock5 = true;
-        Debug.Log(this.transform.position);
+        //Debug.Log(this.transform.position);
     }
 }

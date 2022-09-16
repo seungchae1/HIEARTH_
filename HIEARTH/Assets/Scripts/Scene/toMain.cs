@@ -8,5 +8,9 @@ public class toMain : MonoBehaviour
     public void SceneChange()
     {
         SceneManager.LoadScene("mainScene");
+
+
+        tomainani.isdone = true;
     }
+
 }

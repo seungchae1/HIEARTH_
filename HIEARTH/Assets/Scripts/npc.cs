@@ -4,103 +4,140 @@ using UnityEngine;
 
 public class npc : MonoBehaviour
 {
+    //npc 숫자
+    public static bool[] npcNum = { false, false, false, false };
 
-    public static int[] npcNum = { 0, 0, 0, 0 };
-    public static bool ischatdone = true;
-    public static bool istrashclear = true;
+    //대화 끝여부
+    public static int ischatdone = 0;
 
+    //카메라 고정
     public GameObject camera;
-
-
 
     //npc
     public GameObject npcK_;
     public GameObject npcW_;
     public GameObject npcT_;
-
+    public GameObject npcS_;
 
     //대화창
     public GameObject npc_1;
     public GameObject npc_2;
     public GameObject npc_3;
+    public GameObject npc_4;
 
     //방향키 끄기
     public GameObject move;
+
+
+
+//쓰레기 퍼즐
+    public static int istrashclear = 0;
+
     private void Update()
     {
-        Debug.Log(camera.transform.position);
-        Debug.Log("pl"+this.transform.position);
-        if (ischatdone == true)
+        if (ischatdone == 2)
         {
-
+            move.SetActive(true);
             npc_1.SetActive(false);
             npc_2.SetActive(false);
             npc_3.SetActive(false);
-            Debug.Log("pl");
-            move.SetActive(true);
-
-
+            npc_4.SetActive(false);
         }
 
-        if(istrashclear== false)
-        {
-            npc_1.SetActive(false);
+            if (istrashclear == 1)
+            {
+
+                move.SetActive(true);
+                npc_1.SetActive(false);
+
+            }
+
+            if (istrashclear == 2)
+            {
+                move.SetActive(false);
+                npc_1.SetActive(true);
+                istrashclear = 0;
 
         }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
-
+        //코알라와 닿으면
         if (collision.transform.tag == "npcK")
         {
-            ischatdone = false;
-
-
-            //일단 npc대화 진행했나 안했나 확인
-            if (npcNum[0] == 0)
+            if (npcNum[0] == false)
             {
-                
-                camera.transform.position = new Vector3(11.0f, 0.0f, -10.0f);
-                this.transform.position = new Vector3(12.4f, -0.2f, 0.0f);
-                npc_1.SetActive(true);
+                npcNum[0] = true;
+                ischatdone = 1;
+
+                //camera.transform.position = new Vector3(11.0f, 0.0f, -10.0f);
+                //this.transform.position = new Vector3(12.4f, -0.2f, 0.0f);
+
                 move.SetActive(false);
+                npc_1.SetActive(true);
+                chat_Manger.touchNum = 1;
 
-                npcK_.GetComponent<BoxCollider2D>().enabled = false; //앞으로 갈수 있게 컴포넌트 비활성화
-
-                npcNum[0] = 1;
+                npcK_.GetComponent<BoxCollider2D>().enabled = false;
             }
         }
 
+        //나무와 닿으면
         if (collision.transform.tag == "npcW")
         {
-            ischatdone = false;
-
-
-            //일단 npc대화 진행했나 안했나 확인
-            if (npcNum[1] == 0)
+            if (npcNum[1] == false)
             {
-                npc_2.SetActive(true);
-                npcW_.GetComponent<BoxCollider2D>().enabled = false; //앞으로 갈수 있게 컴포넌트 비활성화
+                npcNum[1] = true;
+                ischatdone = 1;
+
+                //camera.transform.position = new Vector3(11.0f, 0.0f, -10.0f);
+                //this.transform.position = new Vector3(12.4f, -0.2f, 0.0f);
+
                 move.SetActive(false);
-                npcNum[1] = 1;
+                npc_2.SetActive(true);
+                chat_Manger.touchNum = 1;
+
+                npcW_.GetComponent<BoxCollider2D>().enabled = false;
             }
         }
 
         if (collision.transform.tag == "npcT")
         {
-            ischatdone = false;
-
-
-            //일단 npc대화 진행했나 안했나 확인
-            if (npcNum[2] == 0)
+            if (npcNum[2] == false)
             {
-                npc_3.SetActive(true);
-                npcT_.GetComponent<BoxCollider2D>().enabled = false; //앞으로 갈수 있게 컴포넌트 비활성화
+                npcNum[2] = true;
+                ischatdone = 1;
+
+                //camera.transform.position = new Vector3(11.0f, 0.0f, -10.0f);
+                //this.transform.position = new Vector3(12.4f, -0.2f, 0.0f);
+
                 move.SetActive(false);
-                npcNum[2] = 1;
+                npc_3.SetActive(true);
+                chat_Manger.touchNum = 1;
+
+                npcT_.GetComponent<BoxCollider2D>().enabled = false;
             }
         }
+
+        if (collision.transform.tag == "npcS")
+        {
+            if (npcNum[3] == false)
+            {
+                npcNum[3] = true;
+                ischatdone = 1;
+
+                //camera.transform.position = new Vector3(11.0f, 0.0f, -10.0f);
+                //this.transform.position = new Vector3(12.4f, -0.2f, 0.0f);
+
+                move.SetActive(false);
+                npc_4.SetActive(true);
+                chat_Manger.touchNum = 1;
+
+                npcS_.GetComponent<BoxCollider2D>().enabled = false;
+            }
+        }
+
     }
+
 }
