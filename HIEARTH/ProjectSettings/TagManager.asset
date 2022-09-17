@@ -12,6 +12,8 @@ TagManager:
   - ground
   - trash_bag
   - npcS
+  - rock
+  - trash
   layers:
   - Default
   - TransparentFX

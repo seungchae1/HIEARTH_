@@ -5,18 +5,16 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
-    Touch t;
-
     public Transform player;
     public float jump;
+
     bool isjump=false;
     float thisy;
     Rigidbody2D rigid;
     Animator animator;
-    // Start is called before the first frame update
+
     void Start()
     {
-        t = GameObject.Find("player").GetComponent<Touch>();
         rigid = player.GetComponent<Rigidbody2D>();
         animator = player.GetComponent<Animator>();
     }
@@ -29,14 +27,12 @@ public class Jump : MonoBehaviour
         if (isjump)
         {
             rigid.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
-            if (player.transform.position.y >= thisy)
-            {
-                isjump = false;
-            }
+            isjump = false;
         }
-        if (t.istouch==false)
+        if (Touch.istouch==false)
         {
-            animator.SetBool("isjump", true);
+            if (player.transform.position.y >= thisy + (jump - 1.0))
+                animator.SetBool("isjump", true);
         }
     }
     public void Up()
@@ -45,7 +41,7 @@ public class Jump : MonoBehaviour
     }
     public void Down()
     {
-        if (t.istouch)
+        if (Touch.istouch)
         {
             isjump = true;
         }

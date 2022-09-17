@@ -6,7 +6,7 @@ public class playerMove : MonoBehaviour
 {
     public Transform player;
     public float Speed;
-    bool right, left;
+    public static bool right, left;
     Animator animator;
     Rigidbody2D rigid;
 

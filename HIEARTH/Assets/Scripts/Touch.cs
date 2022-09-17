@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Touch : MonoBehaviour
 {
-    public bool istouch;
+    public static bool istouch;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,16 +17,15 @@ public class Touch : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.collider.tag == "Untagged")
+        if (col.collider.tag == "Untagged" || col.collider.tag == "rock")
         {
             istouch = true;
-
         }
 
     }
     void OnCollisionExit2D(Collision2D col)
     {
-        if (col.collider.tag == "Untagged")
+        if (col.collider.tag == "Untagged" || col.collider.tag == "rock")
          {
             istouch = false;
         }

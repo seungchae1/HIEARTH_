@@ -24,7 +24,7 @@ public class getTrash : MonoBehaviour
         { 
             if (touch)
             {
-                this.transform.localScale = new Vector3(0f, 0f, 0f);
+                Destroy(this.gameObject);
             }
         }
 

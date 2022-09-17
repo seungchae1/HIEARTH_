@@ -5,7 +5,7 @@ using UnityEngine;
 public class Trash : MonoBehaviour
 {
     public static bool isTouch;
-    private void Start()
+    void Start()
     {
         isTouch = false;
     }
@@ -14,8 +14,7 @@ public class Trash : MonoBehaviour
     {
         if (isTouch)
         {
-            this.transform.localScale = new Vector3(0f, 0f, 0f);
-
+            Destroy(this.gameObject);
         }
     }
 
