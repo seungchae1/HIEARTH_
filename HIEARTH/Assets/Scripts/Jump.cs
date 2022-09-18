@@ -7,9 +7,7 @@ public class Jump : MonoBehaviour
 {
     public Transform player;
     public float jump;
-
     bool isjump=false;
-    float thisy;
     Rigidbody2D rigid;
     Animator animator;
 
@@ -23,16 +21,14 @@ public class Jump : MonoBehaviour
     void Update()
     {
         animator.SetBool("isjump", false);
-        thisy = player.position.y;
         if (isjump)
         {
-            Debug.Log("asdfasfs");
             rigid.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
             isjump = false;
         }
         if (Touch.istouch==false)
         {
-            if (player.transform.position.y >= thisy + (jump - 1.0))
+            if (player.transform.position.y >= 0.5f)
                 animator.SetBool("isjump", true);
         }
     }

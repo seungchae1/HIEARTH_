@@ -15,9 +15,9 @@ public class moveShip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (start)
+        if (ClickRope.Rope)
         {
-            if (ClickRope.Rope)
+            if (start)
             {
                 if (!(playerMove.left && playerMove.right))
                 {
@@ -35,7 +35,7 @@ public class moveShip : MonoBehaviour
         {
             start = true;
         }
-        else if(col.collider.tag == "Untagged")
+        else if(col.collider.tag == "ground")
         {
             start = false;
         }

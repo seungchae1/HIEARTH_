@@ -4,22 +4,17 @@ using UnityEngine;
 
 public class remove_trash : MonoBehaviour
 {
-    int cnt;
+    public static int cnt=0;
     public static bool trash;
     // Start is called before the first frame update
     void Start()
     {
-        cnt = 0;
         trash = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(cnt == 34)
-        {
-            trash = true;
-        }
     }
 
     private void OnMouseDown()
