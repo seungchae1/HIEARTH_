@@ -26,6 +26,7 @@ public class Jump : MonoBehaviour
         thisy = player.position.y;
         if (isjump)
         {
+            Debug.Log("asdfasfs");
             rigid.AddForce(Vector2.up * jump, ForceMode2D.Impulse);
             isjump = false;
         }

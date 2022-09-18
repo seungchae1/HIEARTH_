@@ -5,7 +5,8 @@ using UnityEngine;
 public class moveShip : MonoBehaviour
 {
     bool start;
-    // Start is called before the first frame update
+    public GameObject smoke;
+    // Start is called before the first frame update 20.5ø°º≠ ∏ÿ√ﬂ±‚
     void Start()
     {
         start = false;
@@ -22,6 +23,7 @@ public class moveShip : MonoBehaviour
                 {
                     GameObject.Find("player").transform.position += Vector3.right * 1.0f * Time.deltaTime;
                     this.transform.position += Vector3.right * 1.0f * Time.deltaTime;
+                    smoke.SetActive(true);
                 }
                 else this.transform.position += Vector3.right * 1.0f * Time.deltaTime;
             }
