@@ -16,6 +16,10 @@ public class pz8 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Tabacoo.tabac) img.sprite = sprite_img;
+        if (Tabacoo.tabac)
+        {
+            img.sprite = sprite_img;
+            pz1.pzNum++;
+        }
     }
 }

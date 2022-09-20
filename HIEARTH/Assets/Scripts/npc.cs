@@ -5,7 +5,7 @@ using UnityEngine;
 public class npc : MonoBehaviour
 {
     //npc 숫자
-    public static bool[] npcNum = { false, false, false, false };
+    public static int[] npcNum = { 0, 0, 0, 0 , 0, 0, 0, 0, 0 };
 
     //대화 끝여부
     public static int ischatdone = 0;
@@ -17,13 +17,13 @@ public class npc : MonoBehaviour
     public GameObject npcK_;
     public GameObject npcW_;
     public GameObject npcT_;
-    public GameObject npcS_;
+   // public GameObject npcS_;
 
     //대화창
-    public GameObject npc_1;
-    public GameObject npc_2;
-    public GameObject npc_3;
-    public GameObject npc_4;
+    public GameObject npc_1 = null;
+    public GameObject npc_2 = null;
+    public GameObject npc_3 = null;
+   // public GameObject npc_4 = null;
 
     //방향키 끄기
     public GameObject move;
@@ -41,10 +41,24 @@ public class npc : MonoBehaviour
             npc_1.SetActive(false);
             npc_2.SetActive(false);
             npc_3.SetActive(false);
-            npc_4.SetActive(false);
+           // npc_4.SetActive(false);
         }
 
-            if (istrashclear == 1)
+        if (npcNum[0] == 1)
+        {
+            npcK_.GetComponent<BoxCollider2D>().enabled = false;
+        }
+        else if (npcNum[1] == 1)
+        {
+            npcW_.GetComponent<BoxCollider2D>().enabled = false;
+        }
+        else if (npcNum[2] == 1)
+        {
+            npcT_.GetComponent<BoxCollider2D>().enabled = false;
+        }
+        
+
+        if (istrashclear == 1)
             {
 
                 move.SetActive(true);
@@ -67,9 +81,9 @@ public class npc : MonoBehaviour
         //코알라와 닿으면
         if (collision.transform.tag == "npcK")
         {
-            if (npcNum[0] == false)
+            if (npcNum[0] == 0)
             {
-                npcNum[0] = true;
+                
                 ischatdone = 1;
 
                 //camera.transform.position = new Vector3(11.0f, 0.0f, -10.0f);
@@ -86,9 +100,8 @@ public class npc : MonoBehaviour
         //나무와 닿으면
         if (collision.transform.tag == "npcW")
         {
-            if (npcNum[1] == false)
+            if (npcNum[1] == 0)
             {
-                npcNum[1] = true;
                 ischatdone = 1;
 
                 //camera.transform.position = new Vector3(11.0f, 0.0f, -10.0f);
@@ -104,9 +117,9 @@ public class npc : MonoBehaviour
 
         if (collision.transform.tag == "npcT")
         {
-            if (npcNum[2] == false)
+            if (npcNum[2] == 0)
             {
-                npcNum[2] = true;
+               
                 ischatdone = 1;
 
                 //camera.transform.position = new Vector3(11.0f, 0.0f, -10.0f);
@@ -117,24 +130,6 @@ public class npc : MonoBehaviour
                 chat_Manger.touchNum = 1;
 
                 npcT_.GetComponent<BoxCollider2D>().enabled = false;
-            }
-        }
-
-        if (collision.transform.tag == "npcS")
-        {
-            if (npcNum[3] == false)
-            {
-                npcNum[3] = true;
-                ischatdone = 1;
-
-                //camera.transform.position = new Vector3(11.0f, 0.0f, -10.0f);
-                //this.transform.position = new Vector3(12.4f, -0.2f, 0.0f);
-
-                move.SetActive(false);
-                npc_4.SetActive(true);
-                chat_Manger.touchNum = 1;
-
-                npcS_.GetComponent<BoxCollider2D>().enabled = false;
             }
         }
 

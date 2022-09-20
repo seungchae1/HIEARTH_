@@ -16,6 +16,10 @@ public class pz7 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (getFruit.get_fruit) img.sprite = sprite_img;
+        if (getFruit.get_fruit)
+        {
+            img.sprite = sprite_img;
+            pz1.pzNum++;
+        }
     }
 }

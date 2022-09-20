@@ -2,16 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-/*
+
 public class chat_Manager3 : MonoBehaviour
 {
-    public static int touchNum = 0;
 
-
-    [SerializeField] public Text npcTexts;
-
-
+    public Text npcTexts;
     public GameObject quizS;
+
+    public GameObject block;
 
     string[] npcChat_S =
     {
@@ -23,7 +21,6 @@ public class chat_Manager3 : MonoBehaviour
     void Start()
     {
         npcTexts.text = npcChat_S[0];
-        //Debug.Log("asdf" + npcChat_S[0]);
     }
 
     public void offquizS()
@@ -33,26 +30,30 @@ public class chat_Manager3 : MonoBehaviour
 
     public void OnTouchedS()
     {
-        if (touchNum == 1)
+        Debug.Log("asdf");
+        if (chat_Manger.touchNum == 1)
         {
 
-            npcTextt.text = npcChat_T[1];
-            touchNum++;//2
+            npcTexts.text = npcChat_S[1];
+            chat_Manger.touchNum++;//2
         }
-        else if (touchNum == 2)
+        else if (chat_Manger.touchNum == 2)
         {
             quizS.SetActive(true);
-            npcTextt.text = npcChat_T[2];
-            touchNum++;//3
+            npcTexts.text = npcChat_S[2];
+            chat_Manger.touchNum++;//3
         }
 
-        else if (touchNum == 3)
+        else if (chat_Manger.touchNum == 3)
         {
             npc.ischatdone = 2;
-
+            block.SetActive(false);
+            npc.npcNum[3] = 1;
         }
 
 
     }
+
+
 }
-*/
+

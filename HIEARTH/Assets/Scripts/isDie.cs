@@ -10,9 +10,16 @@ public class isDie : MonoBehaviour
     {
         if (collision.transform.tag == "Enemy")
         {
-            Debug.Log("À¸¾Ó¤¡");
             PlayerManager.isGameOver = true;
+
+            //Invoke("delayDie", 0.01f);
             gameOverScreen.SetActive(true);
         }
+        /*
+        void delayDie()
+        {
+            gameOverScreen.SetActive(true);
+        }
+        */
     }
 }

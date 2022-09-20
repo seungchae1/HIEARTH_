@@ -14,6 +14,16 @@ TagManager:
   - npcS
   - rock
   - trash
+  - save
+  - save2
+  - save3
+  - save4
+  - save5
+  - npcN
+  - npcF
+  - npcTurt
+  - npcWha
+  - npcB
   layers:
   - Default
   - TransparentFX

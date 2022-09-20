@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class pz1 : MonoBehaviour
 {
+    public static int pzNum = 0;
     Image img;
     public Sprite sprite_img;
     // Start is called before the first frame update
@@ -16,6 +17,10 @@ public class pz1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player_p1.rock1) img.sprite = sprite_img;
+        if (player_p1.rock1)
+        {
+            img.sprite = sprite_img;
+            pzNum++;
+        }
     }
 }

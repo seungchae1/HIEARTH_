@@ -11,5 +11,14 @@ public class toSea1 : MonoBehaviour
         SceneManager.LoadScene("stageSea1");
         //cam.transform.position = new Vector3(11.0f, 0.0f, -10.0f);
     }
+    private void Awake()
+    {
+        Time.timeScale = 1f;
+    }
+    public void delete()
+    {
+        PlayerPrefs.DeleteAll();
+        Save2.reset2 = true;
+    }
 }
 

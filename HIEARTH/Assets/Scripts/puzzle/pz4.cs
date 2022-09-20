@@ -16,6 +16,10 @@ public class pz4 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player_p1.rock4) img.sprite = sprite_img;
+        if (player_p1.rock4)
+        {
+            img.sprite = sprite_img;
+            pz1.pzNum++;
+        }
     }
 }

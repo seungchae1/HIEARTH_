@@ -7,17 +7,16 @@ using UnityEngine.UI;
 
 public class chat_Manger : MonoBehaviour
 {
+
     public static int touchNum = 0;
 
-    [SerializeField] public Text npcTextk;
-    [SerializeField] public Text npcTextw;
-    [SerializeField] public Text npcTextt;
-    [SerializeField] public Text npcTexts;
+     public Text npcTextk;
+     public Text npcTextw;
+     public Text npcTextt;
     
     public GameObject quizK;
     public GameObject quizT;
     public GameObject quizW;
-    public GameObject quizS;
 
     public GameObject chatT;
 
@@ -51,28 +50,12 @@ public class chat_Manger : MonoBehaviour
         "이 열매는 무슨 의미지...?",
         "고마워! 이 앞이 바로 내가 살던 숲이야.",
     };
-
-    string[] npcChat_S =
-    {
-        "아오-!! 내 집! 내 밥! 뭐냐고!! 왜 다 타버린거야?",
-        "이게 화재의 원인...? 널 믿을 수 있을까? 내게 믿음을 줘!",
-        "정답!! 좋아 널 믿어줄게!"
-    };
-
     void Start()
     {
         npcTextk.text = npcChat_K[0];
         npcTextw.text = npcChat_W[0];
         npcTextt.text = npcChat_T[0];
-        //npcTexts.text = npcChat_S[0];
-       // Debug.Log("asdf"+npcChat_S[0]);
     }
-    private void Update()
-    {
-        Debug.Log(touchNum);
-        //Debug.Log(npcChat_S[0]);
-    }
-
     public void offquizK()
     {
         quizK.SetActive(false);
@@ -86,11 +69,6 @@ public class chat_Manger : MonoBehaviour
     public void offquizT()
     {
         quizT.SetActive(false);
-    }
-
-    public void offquizS()
-    {
-        quizS.SetActive(false);
     }
 
     public void chatT1()
@@ -149,7 +127,8 @@ public class chat_Manger : MonoBehaviour
         else if (touchNum == 7)
         {
             npc.ischatdone = 2;
-           
+            npc.npcNum[0] = 1;
+
         }
      
     }
@@ -178,6 +157,7 @@ public class chat_Manger : MonoBehaviour
         else if (touchNum == 4)
         {
             npc.ischatdone = 2;
+            npc.npcNum[1] = 1;
 
         }
 
@@ -204,37 +184,11 @@ public class chat_Manger : MonoBehaviour
         else if (touchNum == 4)
         {
             npc.ischatdone = 2;
-
+            npc.npcNum[2] = 1;
         }
         
 
     }
-
-    public void OnTouchedS()
-    {
-        Debug.Log("asdf");
-        if (touchNum == 1)
-        {
-            
-            npcTexts.text = npcChat_S[1];
-            touchNum++;//2
-        }
-        else if (touchNum == 2)
-        {
-            quizS.SetActive(true);
-            npcTexts.text = npcChat_S[2];
-            touchNum++;//3
-        }
-
-        else if (touchNum == 3)
-        {
-            npc.ischatdone = 2;
-
-        }
-
-
-    }
-
    
 }
 

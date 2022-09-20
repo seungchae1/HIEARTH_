@@ -21,6 +21,6 @@ public class player_p1 : MonoBehaviour
         if (this.transform.position.x >= 13.0f) rock1 = true;
         if (this.transform.position.x >= 24.0f) rock2 = true;
         if (this.transform.position.x >= 83.0f) rock4 = true;
-        Debug.Log(this.transform.position);
+       // Debug.Log(this.transform.position);
     }
 }

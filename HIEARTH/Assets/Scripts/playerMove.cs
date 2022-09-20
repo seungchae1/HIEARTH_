@@ -5,9 +5,10 @@ using UnityEngine;
 public class playerMove : MonoBehaviour
 {
     public Transform player;
-    public float Speed;
+    public float Speed=1.0f;
     public static bool right, left;
     Animator animator;
+   // public static GameObject Player;
     Rigidbody2D rigid;
 
     // Start is called before the first frame update
@@ -15,6 +16,7 @@ public class playerMove : MonoBehaviour
     {
         animator = player.GetComponent<Animator>();
         rigid = player.GetComponent<Rigidbody2D>();
+        
 
     }
     // Update is called once per frame
@@ -32,24 +34,40 @@ public class playerMove : MonoBehaviour
         }
     }
 
-    public void Up()
+    private void Awake()
     {
-        right = false;
-        animator.SetBool("iswalk", false);
+        //var obj = FindObjectsOfType<DontDestoryObject>();
+        //if (obj.Length == 1)
+        //{
+          //  DontDestroyOnLoad(Player);
+            //}
+            //else
+            //{
+            // Destroy(gameObject);
+            //}
+        //}
+
     }
-    public void Dawn()
-    {
-        right = true;
-        animator.SetBool("iswalk", true);
+        public void Up()
+        {
+            right = false;
+            animator.SetBool("iswalk", false);
+        }
+        public void Dawn()
+        {
+            right = true;
+            animator.SetBool("iswalk", true);
+        }
+        public void BackUp()
+        {
+            left = false;
+            animator.SetBool("iswalk", false);
+        }
+        public void BackDown()
+        {
+            left = true;
+            animator.SetBool("iswalk", true);
+        }
     }
-    public void BackUp()
-    {
-        left = false;
-        animator.SetBool("iswalk", false);
-    }
-    public void BackDown()
-    {
-        left = true;
-        animator.SetBool("iswalk", true);
-    }
-}
+
+
